@@ -31,7 +31,8 @@
         "drupal/webform": "^5.0@beta",
         "drupal/ds": "^3.1",
         "drupal/devel": "^1.0@RC",
-        "drupal/redirect": "^1.0@alpha"
+        "drupal/redirect": "^1.0@alpha",
+        "drupal/focal_point": "^1.0@beta"
     },
     "repositories": [
         {
