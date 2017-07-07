@@ -1,0 +1,10 @@
+global-css:
+  css:
+    theme:
+      http://ss.ucr.mine.nu/assets/css/blue7.css: {}
+
+      global-js:
+        js:
+          js/main.js: {}
+        dependencies:
+          -core/jquery
