@@ -17,15 +17,63 @@
 #}
 
 {% block content %}
-  {% if site_logo %}
-    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
-      <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
-    </a>
-  {% endif %}
-  {% if site_name %}
-    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
-  {% endif %}
-  {{ site_slogan }}
+
+<div class="column small-12 small-order-2 medium-order-1">
+	<div class="row audience collapse align-middle">
+	    <div class="column small-uncollapse parent-org">
+	        <a href="http://chass.ucr.edu">College of Humanities, Arts, &amp;&nbsp;Social&nbsp;Sciences</a>
+	    </div>
+	     <div class="show-for-medium column shrink">
+	        <button class="button button-information block-no-margin" type="button" data-toggle="audiences" aria-controls="audiences" data-is-focus="false" data-yeti-box="audiences" aria-haspopup="true" aria-expanded="false">Find Information for...</button>
+	        <nav class="dropdown-pane dropdown-information" aria-label="Audience navigation" id="audiences" data-dropdown="5rs81v-dropdown" data-hover="true" data-hover-pane="true" data-hover-delay="0" data-v-offset="-1" aria-hidden="true" data-yeti-box="audiences" data-resize="audiences" aria-labelledby="s9m65z-dd-anchor" style="top: 37.5px; left: 453.328px;" data-events="resize">
+		            <ul>
+			            <li><a href="/undergraduate.html">Students</a></li>
+			            <li><a href="nonexistent">Alumni</a></li>
+			            <li><a href="nonexistent">Parents</a></li>
+			            <li><a href="nonexistent">Community</a></li>
+			            <li><a href="nonexistent">Partners</a></li>
+			            <li><a href="nonexistent">Donors</a></li>
+		            </ul>
+	            </nav>
+	        </div>
+	        <div class="column shrink">
+	            <section class="google-search" role="search">
+		            <form id="masthead-search" action="https://www.ucr.edu/search.php">
+			            <label class="show-for-sr" for="header-search">Search for:</label>
+			            <input type="text" maxlength="255" id="header-search" name="q" value="" placeholder=" ">
+		            </form>
+	            </section>
+	        </div>
+	        <div class="column shrink hide-for-medium">
+	            <a href="#" class="header-button nav-handle hamburger hamburger--collapse show-for-small-only fs-navigation-handle fs-navigation-overlay-handle fs-navigation-overlay-right-handle fs-navigation-handle__0 fs-navigation__0 fs-swap-element" data-swap-target=".fs-navigation__0" data-swap-linked="fs-navigation-handle__0" data-swap-group="fs-navigation">
+		            <span class="show-for-sr">Menu</span>
+		            <div class="hamburger-box">
+			            <div class="hamburger-inner"></div>
+		            </div>
+	            </a>
+	        </div>
+	    </div>
+	</div>
+
+<div class="column small-12 small-order-1 medium-order-2">
+    <div class="row brand-bar block-full-height align-middle">
+    {% if site_logo %}
+        <div class="column small-collapse-right shrink">
+           <a class="masthead-logo" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+		      <span class="show-for-sr">UC Riverside</span>
+	    	</a>
+    	</div>
+    {% endif %}
+    <div class="site-header column">
+        <h1 class="block-no-margin"><a href="/">Wizardry Academy: Defense Against the Dark&nbsp;Arts</a></h1>
+    </div>
+    {# TODO: make "custom slogan" a global variable ("slogan" is already used by Drupal) {{ custom_slogan }}#}
+    <div class="slogan column shrink show-for-medium">
+        <p class="block-no-margin">At Home in the World</p>
+    </div>
+    </div>
+</div> 
+
 {% endblock %}
 
 
