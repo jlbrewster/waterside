@@ -42,6 +42,42 @@ class UcrGlobalSettingsForm extends ConfigFormBase {
       '#required' => TRUE,
       '#default_value' => $config->get('parent_name'),
     ];
+    $form['follow_us'] = [
+    	'#type' => 'fieldset',
+    	'#title' => $this->t('Follow Us'),
+    	'#description' => $this->t('This is the configuration group for the \'Follow Us\' block.'),
+      '#required' => FALSE,
+      '#default_value' => $config->get('follow_us'),
+      ];
+
+    $form['follow_us']['facebook'] = [
+		'#type' => 'textfield',
+		'#title' => $this->t('Facebook'),
+		'#description' => $this->t('This is the configuration for the \'Facebook\' block.'),
+		'#required' => TRUE,
+		'#default_value' => $config->get('facebook'),
+    	];
+    $form['follow_us']['twitter'] = [
+		'#type' => 'textfield',
+		'#title' => $this->t('Twitter'),
+		'#description' => $this->t('This is the configuration for the \'Twitter\' block.'),
+		'#required' => TRUE,
+		'#default_value' => $config->get('twitter'),
+    	];
+    $form['follow_us']['youtube'] = [
+		'#type' => 'textfield',
+		'#title' => $this->t('YouTube'),
+		'#description' => $this->t('This is the configuration for the \'YouTube\' block.'),
+		'#required' => TRUE,
+		'#default_value' => $config->get('youtube'),
+    	];
+    $form['follow_us']['linkedin'] = [
+		'#type' => 'textfield',
+		'#title' => $this->t('LinkedIn'),
+		'#description' => $this->t('This is the configuration for the \'LinkedIn\' block.'),
+		'#required' => TRUE,
+		'#default_value' => $config->get('linkedin'),
+    	];
 
     return parent::buildForm($form, $form_state);
   }
